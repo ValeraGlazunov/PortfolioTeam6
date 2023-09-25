@@ -1,0 +1,32 @@
+/* body{
+    background-color: gray;
+} */
+
+.header1{
+    background-color: rgb(33, 33, 53);
+    font-family: monospace;
+    font-size: 30px;
+    max-width: 100%;
+    display: flex;
+    text-align: center;
+    border: 3px solid black;
+}
+.header1 .header-text{
+    padding-left: 40px;
+    padding-right: 40px;
+    /* position: absolute; */
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    
+}
+
+#logo{
+    width: 200px;
+    height: 70px;
+    padding: 5px 5px 5px 5px;
+}
+
+.header-text:hover{
+    text-shadow: 1px 1px 1px white;
+}
