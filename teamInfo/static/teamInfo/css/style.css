@@ -11,6 +11,7 @@
     text-align: center;
     border: 3px solid black;
 }
+
 .header1 .header-text{
     padding-left: 40px;
     padding-right: 40px;
@@ -30,3 +31,4 @@
 .header-text:hover{
     text-shadow: 1px 1px 1px white;
 }
+

@@ -1,25 +1,35 @@
+{% extends 'teamInfo/base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наша освіта</title>
-    <link rel="stylesheet" href="{% static 'teamInfo/css/style.css' %}">
-</head>
-<body>
-    <header class="header1">
-        <a href="{% url 'main' %}">
-            <img id = "logo" src="{% static 'teamInfo/images/logo.png'%}" alt="">
-        </a>
-        <a href="{% url 'educ' %}" class="header-text">Освіта</a>
-        <a href="{% url 'ach' %}" class="header-text">Наші досягнення у програмуванні</a>
-        <a href="{% url 'hobby' %}" class="header-text">Хобі</a>
-        <a href="{% url 'leis' %}" class="header-text">Дозвілля</a>
-    </header>
-    
-    <main>
-        <h1>Освіта</h1>
-    </main>
-    <footer></footer>
-</body>
-</html>
+{% block main %}
+    <h1 class = "main-headline">Освіта</h1>
+    <p class = "p-education">Ми проходимо третій курс Python Django <ion-icon name="logo-python"></ion-icon></p>
+    <p class = "p-education">Вивчаємо JavaScript <ion-icon name="logo-javascript"></ion-icon></p>
+    <p class = "p-education">
+        <ion-icon name="logo-html5"></ion-icon> 
+        Проходили курс з HTML/CSS 
+        <ion-icon name="logo-css3"></ion-icon>
+    </p>
+
+    <style>
+        .main-headline{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 40px;
+        }
+
+        .p-education{
+            font-size: 40px;
+            font-family: monospace;
+            color: white;
+            text-align: center;
+        }
+
+        body{
+            background-color: rgb(54, 54, 75);
+        }
+
+
+    </style>
+
+{% endblock %}

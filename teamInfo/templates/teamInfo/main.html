@@ -1,25 +1,71 @@
+{% extends 'teamInfo/base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% block title %}
     <title>Головна</title>
-    <link rel="stylesheet" href="{% static 'teamInfo/css/style.css' %}">
-</head>
-<body>
-    <header class="header1">
-        <a href="{% url 'main' %}">
-            <img id = "logo" src="{% static 'teamInfo/images/logo.png'%}" alt="">
-        </a>
-        <a href="{% url 'educ' %}" class="header-text">Освіта</a>
-        <a href="{% url 'ach' %}" class="header-text">Наші досягнення у програмуванні</a>
-        <a href="{% url 'hobby' %}" class="header-text">Хобі</a>
-        <a href="{% url 'leis' %}" class="header-text">Дозвілля</a>
-    </header>
-    
-    <main>
-        <h1>Головна сторінка</h1>
-    </main>
-    <footer></footer>
-</body>
-</html>
+{% endblock %}
+
+{% block main %}
+    <h1 class = "main-headline">Головна сторінка</h1>
+    <div id = "team">
+        <div id = "Nikita">
+            <p>Микита Погрібняк</p>
+            <p>Працює з Backend-розробкою на Django</p> 
+            <img src="{% static 'teamInfo/images/image2.png' %}" alt="">
+        </div>
+
+        <div id = "Dima">
+            <p>Дмитро Письменний</p>
+            <p>Team Lead</p>
+            <img src="{% static 'teamInfo/images/image1.png' %}" alt="">
+        </div>
+
+        <div id = "Valera">
+            <p>Валера Глазунов</p>
+            <p>Працює з Frontend-розробкою</p>
+            <img src="{% static 'teamInfo/images/frontend-developer.png' %}" alt="">
+        </div>
+    </div>
+
+    <style>
+        .main-headline{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 40px;
+        }
+        #team{
+            width: 20%;
+            margin: auto;
+        }
+
+        #team div{
+            height: 300px;
+            border: 3px solid white;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #team div p{
+            text-align: center;
+            font-family: monospace;
+            font-size: 16px;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #team div img{
+            width: 80%;
+            height: 80%;
+            position: relative;
+            left: 10%;
+            border: 1px solid white;
+        }
+        body{
+            background-color: rgb(54, 54, 75);
+        }
+
+
+    </style>
+{% endblock %}

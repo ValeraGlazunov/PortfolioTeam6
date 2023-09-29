@@ -1,25 +1,40 @@
+{% extends "teamInfo/base.html"%}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наші досягення у програмуванні</title>
-    <link rel="stylesheet" href="{% static 'teamInfo/css/style.css' %}">
-</head>
-<body>
-    <header class="header1">
-        <a href="{% url 'main' %}">
-            <img id = "logo" src="{% static 'teamInfo/images/logo.png'%}" alt="">
-        </a>
-        <a href="{% url 'educ' %}" class="header-text">Освіта</a>
-        <a href="{% url 'ach' %}" class="header-text">Наші досягнення у програмуванні</a>
-        <a href="{% url 'hobby' %}" class="header-text">Хобі</a>
-        <a href="{% url 'leis' %}" class="header-text">Дозвілля</a>
-    </header>
-    
-    <main>
-        <h1>Наші досягнення</h1>
-    </main>
-    <footer></footer>
-</body>
-</html>
+
+{% block main %}
+    <!-- <div> -->
+    <h1>Наші досягнення</h1>
+    <h2>Кожен має багато проєктів:</h2>
+    <p>відеоігри</p>
+    <p>консольні додатки</p>
+    <p>веб-додатки</p></li> 
+
+    <!-- </div> -->
+
+    <style>
+        h1{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 40px;
+        }
+
+        h2{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 32px;
+        }
+
+        p{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 24px;
+        }
+
+        body{
+            background-color:rgb(54, 54, 75);
+        }
+    </style>
+{% endblock %}
