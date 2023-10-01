@@ -1,0 +1,36 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+
+    {% endblock %}
+    
+    <link rel="stylesheet" href="{% static 'teamInfo/css/style.css' %}">
+    <!-- {% block link %}
+
+    {% endblock %} -->
+</head>
+<body>
+    <header class="header1">
+        <a href="{% url 'main' %}">
+            <img id = "logo" src="{% static 'teamInfo/images/logo.png' %}" alt="">
+        </a>
+        <a href="{% url 'educ' %}" class="header-text">Освіта</a>
+        <a href="{% url 'ach' %}" class="header-text">Наші досягнення у програмуванні</a>
+        <a href="{% url 'hobby' %}" class="header-text">Хобі</a>
+        <a href="{% url 'leis' %}" class="header-text">Дозвілля</a>
+    </header>
+    
+    <main>
+        {% block main %}
+
+        {% endblock %}
+    </main>
+    <footer></footer>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'teamInfo/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Дозвілля</title>
+{% endblock %}
+
+{% block main %}
+    <h1>Дозвілля</h1>
+    <p id="time">Чим ми займаємся у вільний час?</p>
+    <p id="time">У вільний час ми відпочиваємо або робимо домашню роботу на наступне заняття</p>
+
+    <style>
+        h1{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 40px;
+        }
+
+        p{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 32px;
+        }
+        
+        body{
+            background-color:rgb(54, 54, 75);
+        }
+    </style>
+{% endblock %}
